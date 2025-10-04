@@ -44,5 +44,9 @@ export default defineNuxtConfig({
       weights: [300, 400, 500, 600, 700, 800, 900],
       styles: ['normal', 'italic']
     }
+  },
+
+  image: {
+    format: ['webp']
   }
 });
