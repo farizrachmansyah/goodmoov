@@ -1,9 +1,9 @@
 <template>
   <main class="site-main container">
     <section class="flex items-center justify-between mb-6">
-      <NuxtLink to="/" class="text-white text-[32px]">
+      <button class="text-white text-[32px]" @click.prevent="router.back()">
         <NuxtIcon name="arrow-left" />
-      </NuxtLink>
+      </button>
       <SectionTitle :title="categoryData?.name" :is-right-align="true" class="section-title" />
     </section>
 
@@ -27,6 +27,8 @@
 
 <script setup>
 const route = useRoute();
+const router = useRouter();
+
 const categoryId = ref(Number(route.params.id));
 
 const { data: category } = await useFetch('/api/tmdb/genre/movie/list', {
