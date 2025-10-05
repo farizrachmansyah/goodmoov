@@ -57,7 +57,7 @@ export default defineNuxtConfig({
 
   image: {
     provider: 'ipx',
-    domains: isStaging ? ['image.tmdb.org', 'placehold.co'] : ['goodmoov-fariz.netlify.app'],
+    domains: ['image.tmdb.org', 'placehold.co'],
     format: ['webp'],
     quality: 100
   }
