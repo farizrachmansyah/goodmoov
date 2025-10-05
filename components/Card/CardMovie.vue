@@ -1,12 +1,12 @@
 <template>
-  <nuxt-link to="" class="flex flex-col gap-1">
-    <div class="relative aspect-[160/220] max-h-[220px]">
+  <nuxt-link to="" class="group flex flex-col gap-1 cursor-pointer" title="This movie has a title in here">
+    <div class="relative aspect-[160/220] max-h-[220px] overflow-hidden">
       <NuxtImg
         src="https://placehold.co/1080x1920"
         alt="goodmoov"
         width="160"
         height="220"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover group-hover:scale-110 transition-all"
         loading="lazy"
       />
 

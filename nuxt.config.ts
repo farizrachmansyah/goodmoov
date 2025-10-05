@@ -37,6 +37,8 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  css: ['swiper/css', 'swiper/css/pagination'],
+
   modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/tailwindcss', 'nuxt-swiper'],
 
   fonts: {
@@ -47,6 +49,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    format: ['webp']
+    format: ['webp'],
+    quality: 100
   }
 });
