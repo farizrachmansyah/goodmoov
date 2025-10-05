@@ -8,10 +8,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#028641'
+          DEFAULT: '#944FFA'
         },
-        secondary: {
-          DEFAULT: '#dcdc00'
+        primaryaccent: {
+          DEFAULT: '#543B85'
+        },
+        dark: {
+          DEFAULT: '#21252B'
+        },
+        darkaccent: {
+          DEFAULT: '#292E36'
         }
       },
       transitionDuration: {
