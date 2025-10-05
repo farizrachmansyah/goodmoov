@@ -37,9 +37,9 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  css: ['swiper/css', 'swiper/css/pagination'],
+  css: ['~/assets/css/tailwind.css', 'swiper/css', 'swiper/css/pagination'],
 
-  modules: ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image', '@nuxtjs/tailwindcss', 'nuxt-swiper'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxtjs/tailwindcss', 'nuxt-swiper', 'nuxt-icons'],
 
   fonts: {
     defaults: {

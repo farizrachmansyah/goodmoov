@@ -11,11 +11,11 @@
 
 @layer components {
   .container {
-    @apply w-full max-w-none;
+    @apply w-full max-w-none px-6;
   }
 
   .site-main {
-    @apply pt-6 pb-14;
+    @apply flex-grow pt-6 pb-14;
   }
 }
 
@@ -30,4 +30,8 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+}
+
+.nuxt-icon svg {
+  margin: 0 !important;
 }
