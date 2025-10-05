@@ -22,6 +22,7 @@
    ```bash
     TMDB_API_KEY=c1042292167adc9dc2dbe3a920a743d2
     TMDB_BASE_URL=https://api.themoviedb.org/3
+    IS_STAGING=1
    ```
 
 ## ▶️ Run Instructions

@@ -1,5 +1,7 @@
 import defaultMeta from './config/defaultMeta';
 
+const isStaging = Number(process.env.IS_STAGING) === 1;
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -54,8 +56,7 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'static',
-    domains: ['image.tmdb.org', 'placehold.co'],
+    domains: isStaging ? ['image.tmdb.org', 'placehold.co'] : ['goodmoov-fariz.netlify.app'],
     format: ['webp'],
     quality: 100
   }
