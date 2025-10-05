@@ -54,6 +54,8 @@ export default defineNuxtConfig({
   },
 
   image: {
+    provider: 'ipx',
+    domains: ['image.tmdb.org', 'placehold.co'],
     format: ['webp'],
     quality: 100
   }
