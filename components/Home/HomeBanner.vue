@@ -12,11 +12,11 @@
       }"
       class="swiper-container"
     >
-      <SwiperSlide v-for="item in 10" :key="item" class="swiper-slide">
-        <nuxt-link to="" class="cursor-pointer">
+      <SwiperSlide v-for="item in topRated" :key="item.id" class="swiper-slide">
+        <nuxt-link :to="`/movie/${item.id}`" class="cursor-pointer" :title="item.title">
           <NuxtImg
             loading="lazy"
-            src="https://placehold.co/1920x1080"
+            :src="item.image"
             alt="Placeholder"
             class="aspect-[256/120] h-full w-full object-cover rounded-lg"
           />
@@ -29,6 +29,16 @@
 <script setup>
 import { Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+
+const { data: topRated, status: topRatedStatus } = await useFetch('/api/tmdb/movie/top_rated', {
+  default: () => [],
+  transform: (res) =>
+    res.results.map((item) => ({
+      id: item.id,
+      title: item.title,
+      image: `https://image.tmdb.org/t/p/original${item.backdrop_path}`
+    }))
+});
 </script>
 
 <style scoped>

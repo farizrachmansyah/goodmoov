@@ -1,10 +1,11 @@
 <template>
   <section>
     <SectionTitle :title="props.title" class="mb-2" />
+
     <section class="overflow-x-auto scrollbar-hide">
       <ul class="flex gap-2 w-full">
-        <li v-for="item in 10" :key="item" class="max-w-[160px]">
-          <CardMovie />
+        <li v-for="item in props.data" :key="item.id" class="max-w-[160px]">
+          <CardMovie :data="item" />
         </li>
       </ul>
     </section>
@@ -16,6 +17,14 @@ const props = defineProps({
   title: {
     type: String,
     default: 'Title'
+  },
+  data: {
+    type: Array,
+    default: () => []
+  },
+  isLoading: {
+    type: Boolean,
+    default: true
   }
 });
 </script>

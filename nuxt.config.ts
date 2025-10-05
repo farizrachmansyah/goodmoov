@@ -37,9 +37,14 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    TMDB_API_KEY: process.env.TMDB_API_KEY,
+    TMDB_BASE_URL: process.env.TMDB_BASE_URL
+  },
+
   css: ['~/assets/css/tailwind.css', 'swiper/css', 'swiper/css/pagination'],
 
-  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxtjs/tailwindcss', 'nuxt-swiper', 'nuxt-icons'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxtjs/tailwindcss', 'nuxt-swiper', 'nuxt-icons', '@vueuse/nuxt'],
 
   fonts: {
     defaults: {
